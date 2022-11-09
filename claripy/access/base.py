@@ -19,4 +19,15 @@ class Base:
         Returns
         -------
         """
-        pass
+        url = f"{self.base_url}{api_url}"
+        headers = {"x-api-key": f"{self.__api_key}"}
+
+        response = requests.get(
+            url,
+            headers=headers
+        )
+
+        if response.ok:
+            return response.json()
+        else:
+            return response.status_code

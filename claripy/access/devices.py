@@ -13,3 +13,11 @@ class Devices(Base):
         """
         super().__init__(api_key)
         self.endpoint = "/v1/devices"
+
+    def get(self):
+        """
+        Wrapper for get_request
+        """
+        info = self.get_request(self.endpoint)
+
+        return info
