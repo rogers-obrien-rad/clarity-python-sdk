@@ -1,9 +1,28 @@
+![last_commit](https://img.shields.io/github/last-commit/rogers-obrien-rad/clarity-python-sdk)
 [![test suite](https://github.com/rogers-obrien-rad/package-template/actions/workflows/tests.yml/badge.svg)](https://github.com/rogers-obrien-rad/package-template/actions/workflows/tests.yml)
 
 ![ro_logo](https://github.com/rogers-obrien-rad/general-template/blob/main/images/ro_logo.png)
 
-# _[Repository Title]_
-_[Include a nice one- or two- liner that summarizes the project's purpose and goal]_
+# Clarity.io Python SDK
+SDK to access Clarity.io API resources
 
-# How to Use this Repository
-_[General process(es) and workflows regarding the project/repository]_
+## Installation
+_The SDK is currently under development_
+
+## Usage
+Please see the [Snippets](https://github.com/rogers-obrien-rad/clarity-python-sdk/tree/main/snippets) directory to see sample use cases. Below is the general use case:
+
+```python
+# currently under development
+```
+
+## Resources
+* [Clarity.io](https://www.clarity.io/)
+* [Clarity.io Dashboard](https://dashboard.clarity.io/overview)
+* [Clarity.io API Documentation](https://api-guide.clarity.io/)
+
+## License
+This repository is licensed under the [Apache License](https://github.com/rogers-obrien-rad/clarity-python-sdk/blob/main/LICENSE)
+
+## Contributing
+![contributing](https://img.shields.io/github/contributors/rogers-obrien-rad/clarity-python-sdk)
