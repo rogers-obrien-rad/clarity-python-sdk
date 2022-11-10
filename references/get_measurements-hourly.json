@@ -1,0 +1,105 @@
+{
+    "_id": "636d12befb1aa95ecb6d2de1",
+    "location": {
+        "coordinates": [
+            -97.76235,
+            30.25348
+        ],
+        "type": "Point"
+    },
+    "deviceCode": "A637HNKG",
+    "outputFrequency": "hour",
+    "datasourceType": "CLARITY_NODE",
+    "recId": "averaged:A637HNKG:hour:2022-11-10T15:00:00",
+    "average": "hour",
+    "characteristics": {
+        "relHumid": {
+            "value": 86.71,
+            "weight": 4,
+            "raw": 86.71
+        },
+        "temperature": {
+            "value": 21.95,
+            "weight": 4,
+            "raw": 21.95
+        },
+        "pm2_5ConcNum": {
+            "value": 36.81,
+            "weight": 4,
+            "raw": 36.81
+        },
+        "pm2_5ConcMass": {
+            "value": 39.82,
+            "weight": 4,
+            "raw": 39.82
+        },
+        "pm1ConcNum": {
+            "value": 34.01,
+            "weight": 4,
+            "raw": 34.01
+        },
+        "pm1ConcMass": {
+            "value": 23.33,
+            "weight": 4,
+            "raw": 23.33
+        },
+        "pm10ConcNum": {
+            "value": 37.12,
+            "weight": 4,
+            "raw": 37.12
+        },
+        "pm10ConcMass": {
+            "value": 50.01,
+            "weight": 4,
+            "raw": 50.01
+        },
+        "no2Conc": {
+            "value": 2.67,
+            "weight": 4,
+            "raw": 2.67
+        },
+        "pm2_5ConcMass_24HourRollingMean": {
+            "value": 16.71,
+            "weight": 24,
+            "raw": 16.71
+        },
+        "pm2_5ConcNum_24HourRollingMean": {
+            "value": 16.26,
+            "weight": 24,
+            "raw": 16.26
+        },
+        "pm10ConcMass_24HourRollingMean": {
+            "value": 20.81,
+            "weight": 24,
+            "raw": 20.81
+        },
+        "pm10ConcNum_24HourRollingMean": {
+            "value": 16.39,
+            "weight": 24,
+            "raw": 16.39
+        },
+        "pm2_5ConcMass_NowCast": {
+            "value": 40.11
+        },
+        "pm2_5NowCastAqi": {
+            "value": 112
+        },
+        "no2UsEpaAqi": {
+            "raw": 3,
+            "value": 3
+        },
+        "pm2_5WaDwerAqi": {
+            "raw": 40,
+            "value": 40
+        },
+        "pm10WaDwerAqi": {
+            "raw": 50,
+            "value": 50
+        },
+        "no2WaDwerAqi": {
+            "raw": 3,
+            "value": 3
+        }
+    },
+    "time": "2022-11-10T14:00:00.000Z"
+}
