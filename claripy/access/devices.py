@@ -1,4 +1,5 @@
 from .base import Base
+from claripy.exceptions import ClarityException
 
 class Devices(Base):
 
@@ -18,6 +19,9 @@ class Devices(Base):
         """
         Wrapper for get_request
         """
-        info = self.get_request(self.endpoint)
+        response = self.get_request(self.endpoint)
 
-        return info
+        if response.ok:
+            return response.json()
+        else:
+            raise ClarityException()
