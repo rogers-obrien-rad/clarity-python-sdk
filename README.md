@@ -13,8 +13,17 @@ _The SDK is currently under development_
 Please see the [Snippets](https://github.com/rogers-obrien-rad/clarity-python-sdk/tree/main/snippets) directory to see sample use cases. Below is the general use case:
 
 ```python
-# currently under development
+import os
+from claripy.clarity import Clarity
+
+connection = Clarity(os.getenv("API_KEY"))
+
+latest_data_by_min = connection.__measurements__.get()
+devices = connection.__devices__.get()
+sources = connection.__datasources__.get()
 ```
+
+To create a `Clarity` object, simply pass the API key as a parameter. You then have access to data from the three Clarity endpoints: measurements, devices, and datasources. 
 
 ## Resources
 * [Clarity.io](https://www.clarity.io/)
