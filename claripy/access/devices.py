@@ -16,12 +16,19 @@ class Devices(Base):
         self.endpoint = "/v1/devices"
 
     def get(self):
-        """
-        Wrapper for get_request
-        """
+        """Wrapper for get_request"""
         response = self.get_request(self.endpoint)
 
         if response.ok:
             return response.json()
         else:
             raise ClarityException()
+
+    def codes(self):
+        """Returns list of all device codes (str) registered to account"""
+        info = self.get()
+        codes = []
+        for device_info in info:
+            codes.append(device_info["code"])
+
+        return codes

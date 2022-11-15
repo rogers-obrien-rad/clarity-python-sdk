@@ -3,6 +3,10 @@ from claripy.exceptions import ClarityException, DeviceNotFoundError
 
 from datetime import datetime
 import warnings
+import pathlib
+import pandas as pd
+
+PATH_TO_ROOT = f"{pathlib.Path(__file__).resolve().parent.parent}"
 
 class Measurements(Base):
 
@@ -91,3 +95,67 @@ class Measurements(Base):
             raise DeviceNotFoundError(f"could not find the device {code}", 403)
         else:
             raise ClarityException()
+
+    def export(self, codes, pollutants=None, frequency="minute", start_time=None, end_time=None, limit=5000, save_path=PATH_TO_ROOT):
+        """
+        Creates a csv of the gathered measurements
+        
+        Parameters
+        ----------
+        code : list of str
+            node ID(s)
+        pollutants : list of str, default None
+            pollutants concentrations to export
+            default is to export all available characteristics
+        frequency : str in ["minute","hour","day"], default "minute"
+            output frequency of the measurements
+        start_time : str, default None
+            timestamp of earliest measurement in ISO 8601 format
+        end_time : str, default None
+            timestamp of most recent measurement desired in ISO 8601 format
+        limit : int, default None
+            maximum number of measurements to be returned
+        save_path : str, PATH_TO_ROOT
+            absolute path to the directory to save
+        
+        Saves
+        -----
+        <measurements_by_device> : csv file
+            data from each device specified
+        """
+        
+        for device in codes:
+            measurements = self.get(
+                code=device,
+                frequency=frequency,
+                start_time=start_time,
+                end_time=end_time,
+                limit=limit
+            )
+            # defining pollutant list if not provided
+            if pollutants is None:
+                pollutants = []
+                #for key, val in 
+                pollutants = list(measurements[0]["characteristics"].keys())
+
+            measurements_by_device = {pollutant: [] for pollutant in pollutants}
+            measurements_by_device["timestamp"] = []
+
+            for measurement in measurements:
+                for pollutant in pollutants:
+                    # adding pollutant concentrations to specific device
+                    measurements_by_device[pollutant].append(
+                        measurement["characteristics"][pollutant]["value"]
+                    )
+
+                # adding timestamp to specific device
+                measurements_by_device["timestamp"].append(
+                    measurement["time"]
+                )
+
+            # saving data
+            dataset = pd.DataFrame(measurements_by_device)
+            dataset.set_index("timestamp",inplace=True)
+            latest_str = datetime.strftime(pd.to_datetime(dataset.index[0]), "%Y%m%d")
+            earliest_str = datetime.strftime(pd.to_datetime(dataset.index[-1]), "%Y%m%d")
+            dataset.to_csv(f"{save_path}/{device}-{earliest_str}-{latest_str}-{frequency}.csv")
