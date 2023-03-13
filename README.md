@@ -1,8 +1,6 @@
 ![last_commit](https://img.shields.io/github/last-commit/rogers-obrien-rad/clarity-python-sdk)
 [![test suite](https://github.com/rogers-obrien-rad/package-template/actions/workflows/tests.yml/badge.svg)](https://github.com/rogers-obrien-rad/package-template/actions/workflows/tests.yml)
 
-![ro_logo](https://github.com/rogers-obrien-rad/general-template/blob/main/images/ro_logo.png)
-
 # Clarity.io Python SDK
 SDK to access Clarity.io API resources
 
