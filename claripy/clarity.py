@@ -9,7 +9,7 @@
 
 from .access import datasources, devices, measurements
 
-__version__ = '1.0.0'
+__version__ = '1.0.2'
 
 class Clarity:
 
