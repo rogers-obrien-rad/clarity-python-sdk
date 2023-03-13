@@ -5,7 +5,11 @@
 SDK to access Clarity.io API resources
 
 ## Installation
-_The SDK is currently under development_
+The package is available on [PyPi](https://pypi.org/project/claripy-sdk/) so simple install with `pip`:
+
+```bash
+pip install claripy-sdk
+```
 
 ## Usage
 Please see the [Snippets](https://github.com/rogers-obrien-rad/clarity-python-sdk/tree/main/snippets) directory to see sample use cases. Below is the general use case:
