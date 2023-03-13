@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-from claripy.clarity import __version__
+from claripy import __version__
 
 from pathlib import Path
 this_directory = Path(__file__).parent

@@ -4,12 +4,12 @@
 # Date Created: 11/09/2022
 # Author: Hagen E. Fritz
 # Description: SDK to access Clarity.io resources
-# Last Edited: 11/09/2022
+# Last Edited: 03/13/2023
 # ---
 
 from .access import datasources, devices, measurements
 
-__version__ = '1.0.2'
+__version__ = '1.0.3'
 
 class Clarity:
 
