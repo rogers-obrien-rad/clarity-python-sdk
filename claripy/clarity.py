@@ -9,6 +9,8 @@
 
 from .access import datasources, devices, measurements
 
+__version__ = '1.0.0'
+
 class Clarity:
 
     def __init__(self, api_key) -> None:
