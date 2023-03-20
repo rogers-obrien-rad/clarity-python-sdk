@@ -7,7 +7,7 @@ this_directory = Path(__file__).parent
 long_description = (this_directory / "README.md").read_text()
 
 setup(
-    name="claripy-sdk",
+    name="claripy",
     description="Python SDK for use with Clarity.io sensors",
     long_description=long_description,
     long_description_content_type="text/markdown",
